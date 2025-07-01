@@ -26,9 +26,9 @@ Built using:
 
 ---
 
-## 🧾 Project Structure
+<pre>## 🧾 Project Structure
 
-health-assistant-chatbot/
+```health-assistant-chatbot/
 ├── api/ # FastAPI backend
 ├── data/ # Raw & processed data (ignored in .gitignore)
 ├── models/ # Model training scripts & saved weights
@@ -37,8 +37,8 @@ health-assistant-chatbot/
 ├── ui/ # Streamlit UI
 ├── requirements.txt # Python dependencies
 ├── .gitignore
-└── README.md
-
+└── README.md ```
+</pre>
 ---
 
 ## 📦 Installation
