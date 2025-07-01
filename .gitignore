@@ -1,0 +1,39 @@
+# 🐍 Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pkl
+*.log
+
+# 💾 Data
+data/processed_*.npz
+data/processed_*.npy
+data/image_labels.npy
+data/xray_images/
+*.csv
+*.tsv
+
+# 🤖 Models
+models/*.pth
+models/*.pkl
+models/bert_intent/*.safetensors
+
+# 🚀 Virtual Env
+.venv/
+env/
+venv/
+*.egg-info/
+
+# ⚙️ OS/Editor-specific
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# 📦 Jupyter (if any)
+.ipynb_checkpoints/
+
+# 🧪 Temporary/Test
+metrics_*.txt
+*.tmp

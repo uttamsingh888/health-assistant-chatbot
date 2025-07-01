@@ -1,0 +1,30 @@
+# Core
+numpy
+pandas
+scikit-learn
+matplotlib
+
+# Deep Learning
+torch
+torchvision
+torchaudio
+
+# NLP
+transformers
+sentence-transformers
+nltk
+
+# Image Preprocessing
+opencv-python
+Pillow
+
+# Web API
+fastapi
+uvicorn
+
+# Chat UI
+streamlit
+
+# Optional Utilities
+tqdm
+joblib
