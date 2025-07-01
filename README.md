@@ -43,67 +43,78 @@ health-assistant-chatbot/
 
 ## 📦 Installation
 
-1. Clone the repo:
+#### Clone the repo:
    ```bash
    git clone https://github.com/your-username/health-assistant-chatbot.git
    cd health-assistant-chatbot
-Install dependencies:
+   ```
+#### Install dependencies:
 
 ```bash
 pip install -r requirements.txt
-Preprocess data:
+```
+#### Preprocess data:
 
 ```bash
 cd preprocessing
 python preprocess_tabular.py
 python preprocess_images.py
 python generate_image_labels.py
-Train models:
+```
+#### Train models:
 
 ```bash
 python models/cnn_model.py
 python models/tabular_model.py
 python nlp/bert_model.py
 python models/fusion_model.py
-🧪 Evaluation
+```
+
+##### 🧪 Evaluation
 Run this to get Accuracy, Precision, Recall, F1 Score for your fusion model:
 
 ```bash
 python models/evaluate_fusion_model.py
+```
 🧠 Run the Application
+
 ✅ Start FastAPI server:
 
 ```bash
 cd api
 python -m uvicorn app:app --reload
-Check docs at: http://127.0.0.1:8000/docs
-✅ Start Streamlit chatbot UI:
+```
+#### Check docs at: http://127.0.0.1:8000/docs
+#### ✅ Start Streamlit chatbot UI:
 ```bash
 cd ui
 streamlit run streamlit_ui.py
-📊 Sample Input for API (Swagger)
+```
+#### 📊 Sample Input for API (Swagger)
 Upload X-ray file
 
 Use features as:
+```bash
+json = [1,65,2,1,1,2,1,2,1,1,2,2,2,1,1]
+```
 
-json
-[1,65,2,1,1,2,1,2,1,1,2,2,2,1,1]
-
-📁 Datasets Used
+#### 📁 Datasets Used
 
 🧾 ICS_Synthetic_20000.csv (synthetic patient data)
+
 🖼️ NIH Chest X-ray Dataset (subset of PNG images)
-🧠 Symptom examples for BERT (custom JSON intent list)
-💡 You can scale this to real-world datasets with proper cleaning.
+
+🤢 Symptom examples for BERT (custom JSON intent list)
 
 🧠 Models Used
+```bash
 Input Type	Model
 Tabular	RandomForestClassifier (sklearn)
 Image	ResNet18 (CNN via PyTorch)
 NLP Input	BERT (via HuggingFace)
 Fusion	Custom NN combining image + tabular
-
-# (Optional) Get Metrics
+```
+### Get Metrics
 ```bash
 python models/evaluate_fusion_model.py
 📌 Author
