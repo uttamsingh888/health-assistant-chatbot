@@ -39,10 +39,6 @@ health-assistant-chatbot/
 ├── .gitignore
 └── README.md
 
-yaml
-Copy
-Edit
-
 ---
 
 ## 📦 Installation
