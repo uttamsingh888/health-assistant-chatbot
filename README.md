@@ -49,66 +49,57 @@ health-assistant-chatbot/
    cd health-assistant-chatbot
 Install dependencies:
 
-bash
-Copy
-Edit
+```bash
 pip install -r requirements.txt
+
 Preprocess data:
 
-bash
-Copy
-Edit
+```bash
 cd preprocessing
 python preprocess_tabular.py
 python preprocess_images.py
 python generate_image_labels.py
+
 Train models:
 
-bash
-Copy
-Edit
+```bash
 python models/cnn_model.py
 python models/tabular_model.py
 python nlp/bert_model.py
 python models/fusion_model.py
+
 🧪 Evaluation
 Run this to get Accuracy, Precision, Recall, F1 Score for your fusion model:
 
-bash
-Copy
-Edit
+```bash
 python models/evaluate_fusion_model.py
+
 🧠 Run the Application
 ✅ Start FastAPI server:
-bash
-Copy
-Edit
+
+```bash
 cd api
 python -m uvicorn app:app --reload
 Check docs at: http://127.0.0.1:8000/docs
 
 ✅ Start Streamlit chatbot UI:
-bash
-Copy
-Edit
+```bash
 cd ui
 streamlit run streamlit_ui.py
+
 📊 Sample Input for API (Swagger)
 Upload X-ray file
 
 Use features as:
 
 json
-Copy
-Edit
 [1,65,2,1,1,2,1,2,1,1,2,2,2,1,1]
+
 📁 Datasets Used
+
 🧾 ICS_Synthetic_20000.csv (synthetic patient data)
-
 🖼️ NIH Chest X-ray Dataset (subset of PNG images)
-
 🧠 Symptom examples for BERT (custom JSON intent list)
-
 💡 You can scale this to real-world datasets with proper cleaning.
 
 🧠 Models Used
@@ -119,6 +110,7 @@ NLP Input	BERT (via HuggingFace)
 Fusion	Custom NN combining image + tabular
 
 # (Optional) Get Metrics
+```bash
 python models/evaluate_fusion_model.py
 
 📌 Author
